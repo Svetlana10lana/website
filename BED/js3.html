@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <style>
+       
+        body{
+            background-color: aqua;
+        }
+        p{
+            font-family:Times, "Times New Roman", Georgia, serif;
+            font-size: 50px;
+            background-color: blue;
+            text-align: center;
+            text-shadow: 0 0 20px rgb(226, 240, 248);
+        }
+    
+    </style>
+</head>
+<body>
+    <script> 
+         /*let userName=prompt("What is your name?");
+        document.write("<p>"+"Hello dear "+userName+"!"+"</p>");
+        
+        let a=+prompt("Enter the length of side a in centimeters",3);
+        let b=+prompt("Enter the length of side b in centimeters",4);
+        
+        let S=a*b;
+        document.write("<p>"+"S = "+S+"cm2"+"</p>");
+        let P=2*a+2*b;
+        document.write("<p>"+"P = "+P+"cm"+"</p>");*/
+        
+       
+        let userName=prompt("What is your name?", "Veronika");
+document.writeln("<p>"+"Hello dear "+userName+"!"+"</p>");
+let a=+prompt("Введіть значення сторони прямокутника а", 3);
+let b=+prompt("Введіть значення сторони прямокутника b", 4);
+let S=a*b;
+document.writeln("<p> Площа прямокутника = "+S+" см </p>");
+let P=(a+b)*2;
+document.writeln("<p> Периметр прямокутника = "+P+" см </p>");
+ let k=+prompt("Сторона трикутника a",3);
+        let f=+prompt("Сторона трикутника b",4);
+        let c=+prompt("Сторона трикутника c",5);
+        if (k>0&&f>0&&c>0&&(k+f)>c&&(f+c)>k&&(k+c)>f) { 
+       
+        let p1=k+f+c; 
+        let p2 = p1/2
+        let s2=Math.sqrt(p2*(p2-k)*(p2-f)*(p2-c)); 
+        document.write("<p>"+"Периметр трикутника = = "+s2+" cm2"+"</p>");
+        document.write("<p>"+"Площа трикутника = "+p1+" cm"+"</p>");
+        }
+        else {alert( `Трикутник зі сторонами ${k} ${f} ${c} не існує`)}
+        
+    </script>
+
+</body>
+</html>

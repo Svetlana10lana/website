@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title> 
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Great+Vibes&display=swap');
+</style>
+</head>
+<body>
+ <style>
+ 
+
+body{
+	background-image: url(https://static.vecteezy.com/system/resources/thumbnails/000/154/792/small_2x/vector-green-numbers-background-in-matrix-style.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+    font-family: "Great Vibes", cursive;
+    font-size: 60px;
+
+}
+div{
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    width: 400px;
+    font-size: 25px;
+     font-weight: 400;
+      color: black;
+      border-radius: 15px;
+      padding: 20px 25px;
+      text-align: center;
+      margin: 40px auto;
+      background-color: white;
+align-items: center;
+justify-content: center;
+border: solid 2px black ;
+font-family: "Great Vibes", cursive;
+
+}
+.button-15 {
+  background-image: linear-gradient(#53ff04, #00c954);
+  border: 1px solid #6dcc00;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  direction: ltr;
+  display: block;
+  font-family: "SF Pro Text","SF Pro Icons","AOS Icons","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -.022em;
+  line-height: 1.47059;
+  min-width: 30px;
+  overflow: visible;
+  padding: 4px 15px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  margin: auto;
+  margin-top: 10px;
+  font-family: "Great Vibes", cursive;
+}
+
+.button-15:disabled {
+  cursor: default;
+  opacity: .3;
+}
+
+.button-15:hover {
+  background-image: linear-gradient(#b2ee51, #39cd14);
+  border-color: #33d014;
+  text-decoration: none;
+}
+
+.button-15:active {
+  background-image: linear-gradient(#3dd96c, #00b900);
+  border-color: #45bc00;
+  outline: none;
+}
+
+.button-15:focus {
+  box-shadow: rgba(131, 192, 253, 0.5) 0 0 0 3px;
+  outline: none;
+}	
+input{
+text-align: center; 
+border-color: black;
+border-radius: 25px; 
+height: 50px; 
+margin-bottom: 10px; 
+font-family: "Great Vibes", cursive; 
+}	
+ </style>
+ <div>  
+<h1>Таблиця множення </h1>  
+<input type="text" id="number1" placeholder="">
+<input type="text" id="number2" placeholder="">
+<button onclick="multiplyNumbers()" class="button-15">Розрахувати</button>
+<p>Результат: <span id="result"></span></p> 
+
+ </div> 
+<script>
+function multiplyNumbers(){
+let num1 = parseFloat(document.getElementById("number1").value);
+let num2 = parseFloat(document.getElementById("number2").value);
+if(!isNaN(num1) && !isNaN(num2)){
+let result = num1 * num2;
+document.getElementById("result").textContent = result;   
+}
+else{
+alert("Будь ласка, введіть число.")    
+}     
+}
+</script>
+</body>
+</html>

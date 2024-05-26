@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+body{	
+	background-color: yellow;
+}
+p{
+	font-size: 50px;
+	color: lime;
+	text-align: center;
+	font-family: "Lobster", sans-serif;
+}
+.in1{
+	display: block;
+	margin-bottom: 15px;
+	height: 1cm;
+	font-size: 24px;
+	font-size: 24px;
+	font-family: "Lobster", sans-serif;
+	color: orange;
+}
+.s1,.s2{
+	font-size: 24px;
+	font-family: "Lobster", sans-serif;
+}
+.s2{
+color: black;
+}
+.in3{
+	width: 30px;
+	height: 30px;
+	background-color: black;
+	font-family: "Lobster", sans-serif;
+}
+#span{
+font-family: "Caveat", cursive;
+}
+#value{
+font-family: "Caveat", cursive;
+}
+@media only screen and (max-width:800px){
+  nav,main,aside, .overlay{
+    width: 100%;
+  }
+}

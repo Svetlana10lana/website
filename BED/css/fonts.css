@@ -1,0 +1,87 @@
+body{
+    background-color: #EE82EE;
+}
+p{
+  font-size: 50px;
+}
+.p1{
+    background: linear-gradient(#f0f, #9370DB, #8A2BE2);
+    color: #fff;
+    text-align: center;
+    font-family: 'Caveat', cursive;
+}
+.p2{ 
+    font-family: Times, "Times New Roman", Georgia, serif;
+    font-weight: 700;
+} 
+.p3{
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-color: blue;
+    text-decoration-style: wavy;
+}
+.p4{
+    font-family: "Lucida Console", Courier, monospace;
+    font-style: italic;
+    text-decoration: line-through;
+    text-decoration-color: white;
+    text-decoration-style: dotted;
+
+}  
+.p6{
+font-family: "Lucida Handwriting";
+text-shadow: 2px 2px 10px red;
+color: blue;
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-color: violet;
+    text-decoration-style: double;
+
+}
+.p7{
+font-family: 'Pacifico', cursive;
+text-transform: uppercase;
+text-shadow: 2px -2px 10px red;
+}
+.p8{
+    font-family: 'Press Start 2P', system-ui;
+    text-transform: lowercase;
+    text-shadow: 
+    1px 1px 2px blak,
+    0 0 1em blue,
+    0 0 0.2em blue,
+    color: white;
+}
+.p9{
+font-family: 'Rubik Glitch Pop', system-ui;
+color: blue;
+font-size: 80px;
+}
+.p10{
+font-family: 'Marck Script', cursive;
+}
+.p11{
+font-family: 'Pacifico', cursive;
+}
+.p19{
+font-family: 'Rubik Glitch Pop', system-ui;
+color: green;
+}
+.p19 span{
+color: lightblue;
+}
+.s1{
+color: revert-layer;
+font-size: 2em;
+}
+.s2{
+text-decoration: underline;
+text-decoration-color: blueviolet;
+text-decoration-style: dashed;
+}
+@media only screen and (max-width:800px){
+  nav,main,aside, .overlay{
+    width: 100%;
+  }
+}

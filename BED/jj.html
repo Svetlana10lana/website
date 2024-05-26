@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        body{
+            background-color: aqua;
+        }
+        p{
+            font-family: "Rubik Dirt", system-ui;
+            font-size: 50px;
+            background-color: blue;
+            text-align: center;
+            text-shadow: 0 0 20px rgb(226, 240, 248);
+        }
+    
+    </style>
+</head>
+<body>
+    <script> 
+         let userName=prompt("What is your name?");
+        document.write("<p>"+"Hello dear "+userName+"!"+"</p>");
+        
+        let a=prompt("Enter the length of side a in centimeters",3);
+        let b=prompt("Enter the length of side b in centimeters",4);
+        
+        let S=a*b;
+        document.write("<p>"+"S = "+S+"</p>");
+        let P=2*a+2*b;
+        document.write("<p>"+"P = "+P+"</p>");
+        
+        let k=+prompt("Enter the length of side k in centimeters",3);
+        let f=+prompt("Enter the length of side f in centimeters",4);
+        let c=+prompt("Enter the length of side c in centimeters",5);
+        
+        let p2=parseInt(k)+parseInt(f)+parseInt(c); 
+        
+        let s2=Math.sqrt(p2*(p2-k)*(p2-f)*(p2-c)); 
+        document.write("<p>"+"S = "+s2+"</p>");
+        document.write("<p>"+"P = "+p2+"</p>");
+    </script>
+
+</body>
+</html>

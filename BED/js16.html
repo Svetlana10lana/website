@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+          background-color: black;
+          text-align: center;
+        }
+        #clock{
+          margin-top: 20%;
+          color: rgb(230, 196, 252);
+          text-align: center;
+          font-weight: bold;
+          font-size: 80px;
+          color: rgb(192, 144, 206);
+          text-shadow: 0 0 5px rgb(0, 0, 0), 0 0 10px rgb(0, 0, 0), 0 0 15px rgb(166, 66, 248), 0 0 20px rgb(187, 20, 220), 0 0 35px rgb(140, 20, 220), 0 0 40px rgb(203, 20, 220), 0 0 50px rgb(130, 20, 220), 0 0 75px rgb(107, 20, 220);
+        }
+      </style>
+      <div id="clock">15:38:46</div>
+      <script>
+        window.onload = function(){
+          window.setInterval(function(){
+            let date = new Date();
+            let hours = date.getHours();
+            let minutes = date.getMinutes();
+            let seconds = date.getSeconds();
+          
+            if(hours < 10) hours = "0" + hours;
+            if(minutes < 10) minutes = "0" + minutes;
+            if(seconds < 10) seconds = "0" + seconds;
+            let clock = hours+ ":" + minutes + ":" + seconds;
+            document.getElementById("clock").innerHTML = clock;
+          },1000);
+        };
+      </script>
+</body>
+</html>

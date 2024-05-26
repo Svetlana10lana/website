@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aquamarine;
+            font-size: 50px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+       let namUser;
+let min = +prompt("Введіть мінімальне число", "");
+let max = +prompt("Введіть максимальне число", "");
+
+if (min > max) {
+    [min, max] = [max, min];
+}
+
+let namX = Math.floor(min + Math.random() * ((max + 1) - min));
+let counter = 8;
+
+do {
+    namUser = prompt(`Вгадай число від ${min} до ${max}`, 0);
+    
+    if (namUser === null) {
+        alert("До побачення...");
+        break;
+    }
+
+    namUser = Number(namUser); // Перетворюємо введене значення на число
+
+    if (isNaN(namUser)) {
+        alert("Будь ласка, введіть число.");
+        continue;
+    }
+
+    counter--;
+
+    if (namUser < namX) {
+        alert(`Число ваше менше, у вас залишилось ${counter} спроб.`);
+    } else if (namUser > namX) {
+        alert(`Число ваше більше, у вас залишилось ${counter} спроб.`);
+    } else {
+        alert(`Ви вгадали число: ${namX}; у вас залишилось: ${counter} спроб.`);
+        break;
+    }
+
+    if (counter === 0) {
+        alert(`Ви програли, загадане число було ${namX}.`);
+    }
+
+} while (namUser !== namX && counter > 0);
+
+        /*let inputN = prompt("Введіть число від 1 до 40", "");
+        let questN = prompt("Вгадайте число від 1 до 40", "");
+        inputN=parseInt(inputN);
+        questN=parseInt(questN);
+        if(questN > inputN) answer="Ваше число більше.";
+        if(questN < inputN) answer="Ваше число менше.";
+        if(questN == inputN) answer="Ви вгадали!";
+        alert(answer)*/
+    </script>
+</body>
+</html>

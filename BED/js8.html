@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+        </style>
+    <style>
+        body{
+            background-color: rgb(226, 214, 43);
+            font-size: 100px;
+            font-family: "Caveat", cursive;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <script>
+       let years
+       let age = +prompt('Скільки вам років?','');
+     if (age % 10 == 1 && age % 100 != 11) {
+        years = "рік";
+    } else if ((age % 10 == 2 || age % 10 == 3 || age % 10 == 4) && !(age % 100 >= 12 && age % 100 <= 14)) {
+        years = "роки";
+    } else {
+        years = "років";
+    }
+     if (age >= 18 && age <= 100) {
+        document.write(`Вам ${age} ${years}, тому вітаємо на сайті!`);
+    } else {
+        document.write(`Вам ${age} ${years}, тому вхід заборонено!`);}
+
+
+ 
+       </script>
+</body>
+</html>

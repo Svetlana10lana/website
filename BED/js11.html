@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+        background: url(https://www.shutterstock.com/image-vector/seamless-pattern-testimonials-review-feedback-600nw-1017751450.jpg);
+        text-align: center;
+        font-size: 100px;
+        color: rgb(162, 0, 255);
+        text-shadow: 0 0 50px rgb(255, 5, 5);
+        }
+    </style>
+</head>
+<body>
+    <script>
+             function spamWords() {
+  const userText = prompt("Введіть текст:","spam");
+  
+  if (userText === null) {
+    return false; 
+  }
+
+  const lowerCaseText = userText.toLowerCase();
+  return lowerCaseText.includes("spam") || lowerCaseText.includes("spam");
+}
+const containsSpam = spamWords();
+
+if (containsSpam) {
+  document.write("<div>Це спам</div>");
+} else {
+  document.write("<div>Немає спаму</div>");
+}
+    </script>
+</body>
+</html>

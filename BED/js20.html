@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 80px;
+            text-align: center;
+            color: brown;
+            background-color: beige;
+            
+        }
+    </style>
+</head>
+<body>
+    <script>
+          // Запитати у користувача кількість рядів
+          let numRows = prompt("Скільки рядів ви хочете зробити?");
+        numRows = parseInt(numRows);
+
+        // Запитати у користувача символ для побудови рядів
+        let symbol = prompt("Який символ використовувати для побудови рядів?");
+
+        // Перевірка чи введене значення є числом і більше нуля
+        if (!isNaN(numRows) && numRows > 0) {
+            // Створення рядків
+            for (let i = 1; i <= numRows; i++) {
+                let row = symbol.repeat(i);
+                document.write(row + "<br>");
+            }
+        } else {
+            document.write("Будь ласка, введіть коректне число.");
+        } 
+    
+    </script>
+</body>
+</html>

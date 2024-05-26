@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=., initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+    let money =prompt("Ведіть сумму яку хочете зняти від 50 грн до 10000 грн.");
+        
+        if(isNaN(money)){
+          alert("Ви ввели не число.")
+        }else if (+money < 50 ||+money > 10000){
+            alert("На жаль ви можете зняти гроші на суму від 50 грн до 10000 грн. ")
+    
+}else if(+money%50!=0){
+    alert(`Ваша сумма готова зіберіть ${money - money%50} грн, коміссія ${money%50} грн.`)
+    
+}else{
+    alert(`Заберіть свої грошіу розмірі ${money} грн.` )
+   
+}
+
+    </script>
+</body>
+</html>

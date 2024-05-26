@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Forms</title>
+	<link rel="stylesheet" type="text/css" href="css/forms.css">
+</head>
+<body>
+<p>Ми вивчаєм роботу с формами</p>
+<form name="form1">
+<input type="text" name="text" class="in1">
+<input type="text1" name="text" size="20" maxlength="50" value="Як вас звати" class="in1">
+<input type="text2" name="text" size="30" maxlength="50" value="Ви не можете тут писати" disabled class="in1">
+<input type="text" name="text" size="20" maxlength="50" value="Тут читайтеє)" readonly class="in1">
+<input type="password" name="password" class="in1">
+<p>Вкажіть вашу стать</p>
+<input type="radio" name="gender" class="in2" value="male"><span class="s1">Жіноча</span>
+<input type="radio" name="gender" class="in2" value="male"><span class="s1">Чоловіча</span>
+<br>
+<p>Яку мову бажаєте вивчати</p>
+<input type="checkbox" name="lan1" value="en" class="in3"><span class="s2">Англійська</span>
+<input type="checkbox" name="lan2" value="sp" class="in3"><span class="s2">Іпанська</span>
+<input type="checkbox" name="lan3" value="fr" class="in3"><span class="s2">Французька</span>
+<input type="checkbox" name="lan4" value="ja" class="in3"><span class="s2">Японська</span>
+<br>
+<input type="submit" name="submit" value="Let's go">
+<input type="reset" name="reset">
+<input type="button" name="button" value="Запуск">
+<br>
+<button>
+	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/640px-Gmail_icon_%282020%29.svg.png" width="50px"><span>Відправити листа</span>
+</button>
+<br>
+<input type="file" name="download">
+<br>
+<textarea cols="20" rows="3" wrap="off"></textarea>
+<textarea cols="30" rows="5" wrap="virtual"></textarea>
+<textarea cols="50" rows="7" wrap="physical"></textarea>
+<select>
+	<option value="en">Англійська</option>
+	<option value="sp">Іпанська</option>
+	<option value="fr">Французька</option>
+	<option value="ja">Японська</option>
+</select>
+<select size="2">
+	<option value="en">Англійська</option>
+	<option value="sp">Іпанська</option>
+	<option value="fr">Французька</option>
+	<option value="ja">Японська</option>
+</select>
+<select size="4" multiple>
+	<option value="en">Англійська</option>
+	<option value="sp">Іпанська</option>
+	<option value="fr">Французька</option>
+	<option value="ja">Японська</option>
+</select>
+</form>
+</body>
+</html>

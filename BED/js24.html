@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Знаходження підрядка у рядку</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Great+Vibes&display=swap');
+        </style>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: "Great Vibes", cursive;
+            background-color: black;
+            color: blueviolet;
+            font-size: 40px;
+        }
+        input, button {
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+            color: rgb(12, 12, 12);
+            background-color: blueviolet;
+            text-shadow: 0 0 30px rgb(244, 225, 255);
+        }
+    </style>
+</head>
+<body>
+    <h1>Знаходження підрядка у рядку</h1>
+    <input type="text" id="mainString" placeholder="Введіть основний рядок">
+    <input type="text" id="substring" placeholder="Введіть підрядок">
+    <button onclick="findSubstring()">Знайти підрядок</button>
+    <p id="result"></p>
+
+    <script>
+        function findSubstring() {
+            const mainString = document.getElementById('mainString').value;
+            const substring = document.getElementById('substring').value;
+            const index = mainString.indexOf(substring);
+
+            if (index !== -1) {
+                document.getElementById('result').innerText = `Підрядок знайдено на позиції ${index}`;
+            } else {
+                document.getElementById('result').innerText = 'Підрядок не знайдено';
+            }
+        }
+    </script>
+</body>
+</html>

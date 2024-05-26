@@ -1,0 +1,51 @@
+body{ background-color: forestgreen;}
+p{
+  font-size: 50px;
+   font-family: "Rubik Doodle Shadow", system-ui;
+   text-anchor: center;
+   color: yellow;
+}   
+table{
+     border: double 5px yellow;
+     width: 50%;
+     font-size: 24px;
+     border-collapse: separate;
+     margin: auto;
+}
+th, td{
+border: solid 2px green;
+width: 25%;
+}
+tr:hover{
+  background-color: whitesmoke;
+}
+td:hover{
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 700x;
+	color: green;
+	font-size: 1.5em;
+	background-image: url(https://i.gifer.com/OVZK.gif);
+}
+tr:nth-child(odd){
+	background-color: cornsilk;
+}
+tr:nth-child(even){
+	background-color: wheat;
+}
+.sc{
+	text-align: right;
+	vertical-align: middle;
+	color: green;
+	font-style: italic;
+}
+caption{
+	font-size: 50px;
+	color: white;
+	background: linear-gradient( gold, yellow, lightyellow);
+}
+@media only screen and (max-width:800px){
+  nav,main,aside, .overlay{
+    width: 100%;
+  }
+}

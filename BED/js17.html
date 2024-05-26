@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+        </style>
+        <style>
+        body{
+            background-color: rgb(0, 183, 255);
+            font-size: 60px;
+            font-family: "Pacifico", cursive;
+            color: rgb(0, 46, 252);
+            text-shadow: 0 0 30px rgb(244, 225, 255);
+        }
+        
+        </style>   
+</head>
+<body>
+    <script>
+    let number = prompt("Введіть число і дізнаєтесь, яка літера українського алфавіту під цим номером");
+
+function alphabet(namber, array) {
+    if (namber > 0 && namber <= array.length) {
+        return array[namber - 1]; // Інші номери на 1, оскільки індекси починаються з 0
+    }
+    return -1; // Якщо номер не в діапазоні масиву
+}
+
+let arr = ['А','Б','В','Г','Ґ','Д','Е','Є','Ж','З','И','І','Ї','Й','К','Л','М','Н','О','П','Р','С','Т','У','Ф','Х','Ц','Ч','Ш','Щ','Ь','Ю','Я'];
+
+// Перетворення введеного значення на число
+number = parseInt(number);
+
+// Перевірка чи введене значення є числом і більше нуля
+if (!isNaN(number) && number > 0) {
+    let result = alphabet(number, arr);
+    if (result !== -1) {
+        document.write("Під номером " + number + " знаходиться літера - " + result);
+    } else {
+        alert("Такого номера немає в українському алфавіті.");
+    }
+} else {
+    alert("Будь ласка, введіть коректне число.");
+}
+    </script>
+</body>
+</html>

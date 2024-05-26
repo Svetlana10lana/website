@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+        }
+        .controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 20px;
+        }
+        #canvas {
+            border: 1px solid rgb(174, 0, 255);
+            margin-right: 20px;
+        }
+        #numTriangles {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        #drawButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #1c03ff;
+            color: rgb(1, 2, 3);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #drawButton:hover {
+            background-color: #0077ff;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="700" height="600"></canvas>
+    <div class="controls">
+        <input type="number" id="numTriangles" placeholder="Введіть кількість трикутників" min="1">
+        <button id="drawButton" onclick="drawTriangles()">Намалювати</button>
+    </div>
+
+    <script>
+   function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function drawTriangles() {
+            const numTriangles = document.getElementById('numTriangles').value;
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+
+            // Очищуємо полотно
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            for (let i = 0; i < numTriangles; i++) {
+                const x1 = Math.random() * canvas.width;
+                const y1 = Math.random() * canvas.height;
+                const x2 = Math.random() * canvas.width;
+                const y2 = Math.random() * canvas.height;
+                const x3 = Math.random() * canvas.width;
+                const y3 = Math.random() * canvas.height;
+                const color = getRandomColor();
+
+                ctx.beginPath();
+                ctx.moveTo(x1, y1);
+                ctx.lineTo(x2, y2);
+                ctx.lineTo(x3, y3);
+                ctx.closePath();
+                ctx.fillStyle = color;
+                ctx.fill();
+            }
+        }
+    </script>
+</body>
+</html>

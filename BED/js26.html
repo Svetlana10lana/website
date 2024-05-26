@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Great+Vibes&display=swap');
+        </style>
+    <style>
+    
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000000;
+            font-family: "Great Vibes", cursive;
+            background-color: black;
+            color: yellow;
+
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #0400ff;
+            border-radius: 10px;
+            background-color: rgb(0, 0, 0);
+            box-shadow: 0 0 10px rgb(255, 208, 0);
+            font-family: "Great Vibes", cursive;
+            color: rgb(25, 0, 255);
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 18px;
+            font-family: "Great Vibes", cursive;
+            background-color: #ffd000;
+            color: rgb(10, 10, 10);
+            font-size: 20px;
+        }
+        #result {
+            font-size: 20px;
+            margin-top: 20px;
+            font-family: "Great Vibes", cursive; 
+            background-color: black;
+            color: yellow;
+        }
+        p{
+            background-color: #000000;
+            color: #ffd000;
+            font-size: 50px;
+            font-family: "Great Vibes", cursive;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            padding: 20px;
+        }
+        .container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 18px;
+        }
+        .message {
+            font-size: 24px;
+            color: #ffd000;
+            font-family: "Great Vibes", cursive;
+            box-shadow: 0 0 10px rgb(0, 17, 255);
+
+            
+        }
+        .footer {
+            font-size: 30px;
+            color: #ffd000;
+            font-family: "Great Vibes", cursive;
+            box-shadow: 0 0 10px rgb(55, 0, 255);
+
+        } 
+        p{font-size: 30px;
+            color: #ffd000;
+            font-family: "Great Vibes", cursive;
+            box-shadow: 0 0 10px rgb(55, 0, 255);
+}
+
+    </style>
+ 
+</head>
+<body>
+    <div class="container">
+        <h1>Скільти раз хочете отримати надпис "Слава Україні!"?</h1>
+        <input type="number" id="numTimes" placeholder="Число" min="1">
+        <button onclick="showMessages()">Показати</button>
+        <div id="result"></div>
+    </div>
+    
+
+    <script>
+        let answer=document.getElementById("enter")
+        function showMessages() {
+            const numTimes = parseInt(document.getElementById('numTimes').value);
+            
+            if (!isNaN(numTimes) && numTimes > 0) {
+                document.write("<div class='container'>");
+                for (let i = 1; i <= numTimes; i++) {
+                    document.write("<p>"+`<div class='message'>${i}. Слава Україні!</div>`+"</p>");
+                }
+                document.write("<p>"+`<div class='footer'>Героям слава вигуків - ${numTimes} </div>`+"</p>");
+                document.write("</div>");
+            } else {
+                alert("Будь ласка, введіть  число більше нуля.");
+            }
+        }
+    </script>
+    
+</body>
+</html>

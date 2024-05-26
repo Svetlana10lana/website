@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Малювання кіл</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+        }
+        .controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 20px;
+        }
+        #canvas {
+            border: 1px solid rgb(255, 0, 0);
+            margin-right: 20px;
+        }
+        #numCircles {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        #drawButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #fbff00;
+            color: rgb(5, 4, 4);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #drawButton:hover {
+            background-color: #ffd900;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="700" height="600"></canvas>
+    <div class="controls">
+        <input type="number" id="numCircles" placeholder="Введіть кількість кіл" min="1">
+        <button id="drawButton" onclick="drawCircles()">Намалювати</button>
+    </div>
+
+    <script>
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function drawCircles() {
+            const numCircles = document.getElementById('numCircles').value;
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+
+            // Очищуємо полотно
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            for (let i = 0; i < numCircles; i++) {
+                const x = Math.random() * canvas.width;
+                const y = Math.random() * canvas.height;
+                const radius = Math.random() * 30 + 10; // Зменшили максимальний радіус до 30
+                const color = getRandomColor();
+
+                ctx.beginPath();
+                ctx.arc(x, y, radius, 0, Math.PI * 2);
+                ctx.fillStyle = color;
+                ctx.fill();
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+        </style>
+<style>body{
+    background: url(https://kartinki.pics/uploads/posts/2021-07/1626739168_32-kartinkin-com-p-kalkulyator-fon-krasivo-36.jpg );
+font-size: 70px;
+color: black;
+font-family: "Caveat", cursive;
+text-align: center;
+
+}</style>
+</head>
+<body>
+    <script>
+      alert('Вам потрібно ввести два числа, якщо перше число буде більше, то отримаєте  суму, якщо ж навпаки (друге число більше), то отримаєте добуток.')
+		let number1 = +prompt("Введіть перше ціле число", '');
+		let number2 = +prompt("Введіть друге ціле число", '');
+		document.write("Перше число "+number1+"<br>");
+		document.write("Друге число "+number2+"<br>");
+
+		if (number1 > number2) {
+			document.write("Сума чисел "+(number2+number1)+"<br>");
+		}else if(number2>number1){
+			document.write("Добуток чисел "+number2*number1+"<br>");
+		}else if(number1===number2){
+			alert('І що робити з двома числами?');
+		}else{
+			alert('Введіть числа');
+		}
+    </script>
+</body>
+</html>
